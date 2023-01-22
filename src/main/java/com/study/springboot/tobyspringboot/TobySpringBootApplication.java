@@ -3,13 +3,17 @@ package com.study.springboot.tobyspringboot;
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
 import org.springframework.boot.web.server.WebServer;
 import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
-import org.springframework.web.context.support.GenericWebApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
+@Configuration // 구성 정보를 가지고 있는 class 다.
+@ComponentScan // 컴포넌트가 붙은 클레스를 찾아서 Bean 으로 등록해 달라 Scan 패키지 부터 하위 패키지까지 찾아서 빈으로 등록해준다.
 public class TobySpringBootApplication {
 
     public static void main(String[] args) {
-        GenericWebApplicationContext applicationContext = new GenericWebApplicationContext() {
+        AnnotationConfigWebApplicationContext applicationContext = new AnnotationConfigWebApplicationContext() {
             @Override
             protected void onRefresh() {
                 super.onRefresh();
@@ -26,8 +30,7 @@ public class TobySpringBootApplication {
             }
         };
 
-        applicationContext.registerBean(HelloController.class); // bean 등록 - 스프링 컨테이너가 빈이 어떻게 구성되어 지는가 어떤 클레스로 빈을 만들 것인가
-        applicationContext.registerBean(SimpleHelloService.class); // 스프링에 구성정보를 정확하게 어떤 클레스를 가지고 만들지 명시해줘야함
+        applicationContext.register(TobySpringBootApplication.class);
         applicationContext.refresh(); // 구성 정보를 이용해 컨테이너를 초기화
     }
 }
