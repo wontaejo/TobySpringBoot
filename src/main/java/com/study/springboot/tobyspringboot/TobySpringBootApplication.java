@@ -20,6 +20,7 @@ public class TobySpringBootApplication {
     public static void main(String[] args) {
         GenericApplicationContext applicationContext = new GenericApplicationContext();
         applicationContext.registerBean(HelloController.class); // bean 등록 - 스프링 컨테이너가 빈이 어떻게 구성되어 지는가 어떤 클레스로 빈을 만들 것인가
+        applicationContext.registerBean(SimpleHelloService.class); // 스프링에 구성정보를 정확하게 어떤 클레스를 가지고 만들지 명시해줘야함
         applicationContext.refresh(); // 구성 정보를 이용해 컨테이너를 초기화
 
 
