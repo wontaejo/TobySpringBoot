@@ -1,4 +1,4 @@
-package com.study.springboot.tobyspringboot;
+package com.study.springboot;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;

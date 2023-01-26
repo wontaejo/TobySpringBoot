@@ -1,4 +1,4 @@
-package com.study.springboot.tobyspringboot;
+package com.study.springboot;
 
 import com.study.springboot.config.MySpringBootApplication;
 import org.springframework.boot.SpringApplication;
