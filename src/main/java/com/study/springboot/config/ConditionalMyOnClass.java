@@ -1,4 +1,4 @@
-package com.study.springboot;
+package com.study.springboot.config;
 
 import org.springframework.context.annotation.Conditional;
 

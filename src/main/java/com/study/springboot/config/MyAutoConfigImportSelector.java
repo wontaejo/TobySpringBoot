@@ -18,7 +18,7 @@ public class MyAutoConfigImportSelector implements DeferredImportSelector {
     public String[] selectImports(AnnotationMetadata importingClassMetadata) {
         List<String> autoConfigs = new ArrayList<>();
 
-        ImportCandidates.load(MyAutoConfiguration.class, classLoader).forEach(autoConfigs::add);
+        ImportCandidates.load(MyAutoConfiguration.class, classLoader).forEach(autoConfigs::add); // MyAutoConfiguration 파일에서 정보를 읽어와서 빈들을 만든다.
 
         return autoConfigs.toArray(new String[0]);
     }
