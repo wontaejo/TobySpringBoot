@@ -1,3 +1,4 @@
+com.study.springboot.config.autoconfig.PropertyPlaceHolderConfig
 com.study.springboot.config.autoconfig.TomcatWebServerConfig
 com.study.springboot.config.autoconfig.JettyWebServerConfig
 com.study.springboot.config.autoconfig.DispatcherServletConfig
