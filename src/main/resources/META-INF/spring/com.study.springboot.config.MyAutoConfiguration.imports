@@ -1,4 +1,4 @@
-com.study.springboot.config.autoconfig.ServerPropertiesConfig
+com.study.springboot.config.autoconfig.PropertyPostProcessorConfig
 com.study.springboot.config.autoconfig.PropertyPlaceHolderConfig
 com.study.springboot.config.autoconfig.TomcatWebServerConfig
 com.study.springboot.config.autoconfig.JettyWebServerConfig
