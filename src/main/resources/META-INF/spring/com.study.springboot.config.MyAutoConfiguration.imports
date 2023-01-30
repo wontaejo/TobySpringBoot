@@ -1,3 +1,4 @@
+com.study.springboot.config.autoconfig.DataSourceConfig
 com.study.springboot.config.autoconfig.PropertyPostProcessorConfig
 com.study.springboot.config.autoconfig.PropertyPlaceHolderConfig
 com.study.springboot.config.autoconfig.TomcatWebServerConfig
