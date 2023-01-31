@@ -3,13 +3,12 @@ package com.study.springboot;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.JdbcTest;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import org.assertj.core.api.Assertions;
-import org.springframework.test.annotation.Rollback;
 
-@TobySpringBootTest
-@Rollback(value = false)
+@JdbcTest
 public class JdbcTemplateTest {
     @Autowired
     JdbcTemplate jdbcTemplate;
